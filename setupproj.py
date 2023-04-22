@@ -76,26 +76,29 @@ def use_folder(full_path, folder, openyn, URL, sys_name):
         system("git push -u origin main")
     system(f"{'python' if sys_name=='Windows' else 'python3'} -m venv .{folder}")
     if openyn:
-        system("code .")
+        if openyn.lower() in ('code','vsc','vscode'):
+            system("code .")
+        elif openyn.lower() in ('pycharm','pc'):
+            system("pycharm .")
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Setup new project folder")
     parser.add_argument("--f", dest="folder", type=str, help="name of folder to be added")
-    parser.add_argument("-o", dest='openyn', default="yes", help="To open VScode when done via 'code .'", action="store_true")
+    parser.add_argument("--open", dest='openyn', default=False, help="To open VScode when done via 'code .'")
     parser.add_argument("--url", dest="URL", type=str, help="Use --url URL to provide github url to link to")
     args=parser.parse_args()
 
     folder = args.folder
     URL = args.URL
     openyn = args.openyn
+    print(args)
+    # sys_name = platform.system()
+    # dir_path = dirname(realpath(__file__))
+    # full_path = join(dir_path, folder)
 
-    sys_name = platform.system()
-    dir_path = dirname(realpath(__file__))
-    full_path = join(dir_path, folder)
 
-
-    clear()
-    print(f"Trying to create >{folder}< in {dir_path}")
-    create_folder(full_path)
-    use_folder(full_path, folder, openyn, URL, sys_name)
+    # clear()
+    # print(f"Trying to create >{folder}< in {dir_path}")
+    # create_folder(full_path)
+    # use_folder(full_path, folder, openyn, URL, sys_name)
