@@ -1,8 +1,5 @@
-
-# (or echo .VENVNAME > .gitignore)
-
-# inputs:
-# main.py folder github-url open
+# setupproj
+# To set up a project
 
 import sys
 from os import system, mkdir, makedirs, chdir
@@ -11,18 +8,13 @@ import platform
 import shutil
 import argparse
 
-
-# sys.argv[] where 0 is the name of the program:
-# print("program name:\t",sys.argv[0])
-# Check if folder exists
-# print(platform.system()) # windows has python
-# folder = sys.argv[1]
-# new_folder = folder[folder.rfind("/"):]
-# old_dir = folder[:folder.rfind("/")]
-
 clear = lambda: system("cls || clear")
 
 def create_folder(full_path):
+    """Creates a folder based on the fullpath provided.
+    The full path is create based on the folder this file is ran in and the new foldername provided.
+    Should that folder already exist it will ask you before overwriting."""
+
     try:
         mkdir(full_path)
     except FileExistsError as err:
@@ -60,7 +52,12 @@ def create_folder(full_path):
 
 
 def use_folder(full_path, folder, openyn, URL, sys_name):
+    """Uses the newly created folder to create a new virtual environment, a .gitignore and a README.md
+    If a --open is specified it will attempt to open the IDE at the end.
+    If a --url is specified it will attempt to link to that repo."""
+
     print(f"Do you want to continue and use the {folder}")
+    print("Yes / No")
     x = input().lower()
     if x!="yes":
         sys.exit()    
