@@ -92,13 +92,13 @@ if __name__ == "__main__":
     folder = args.folder
     URL = args.URL
     openyn = args.openyn
-    print(args)
-    # sys_name = platform.system()
-    # dir_path = dirname(realpath(__file__))
-    # full_path = join(dir_path, folder)
+
+    sys_name = platform.system()
+    dir_path = dirname(realpath(__file__))
+    full_path = join(dir_path, folder)
 
 
-    # clear()
-    # print(f"Trying to create >{folder}< in {dir_path}")
-    # create_folder(full_path)
-    # use_folder(full_path, folder, openyn, URL, sys_name)
+    clear()
+    print(f"Trying to create >{folder}< in {dir_path}")
+    create_folder(full_path)
+    use_folder(full_path, folder, openyn, URL, sys_name)
