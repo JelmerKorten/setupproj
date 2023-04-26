@@ -84,6 +84,7 @@ if __name__ == "__main__":
     parser.add_argument("--f", dest="folder", type=str, help="name of folder to be added")
     parser.add_argument("--open", dest='openyn', default=False, help="To open VScode when done via 'code .'")
     parser.add_argument("--url", dest="URL", type=str, help="Use --url URL to provide github url to link to")
+    
     args=parser.parse_args()
 
     folder = args.folder

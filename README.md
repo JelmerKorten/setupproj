@@ -20,3 +20,6 @@ python3 setupproj.py --f FOLDER [--open IDE] [--url url/to/repo.git]
 - If --open is provided it will attempt to open the IDE using either code . or pycharm .
 - Creates a .gitignore with the venv name
 - Creates a README.md with a bare 'readme'
+# Debugging:
+- On Windows >code .< command will be added to path upon installation of VSCode.
+- On macOS you have to do it yourself: Shift Cmd P to open Command Palette, then start typing and find: Shell Command: Install 'code' command in PATH. Run that command and restart the terminal.
