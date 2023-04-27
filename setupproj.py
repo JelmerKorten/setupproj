@@ -8,6 +8,7 @@ import platform
 import shutil
 import argparse
 
+# To clear the terminal
 clear = lambda: system("cls || clear")
 
 def create_folder(full_path):
