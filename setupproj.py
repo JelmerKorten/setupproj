@@ -30,6 +30,8 @@ def create_folder(full_path):
         print("All folders in the path have been created.")
     else:
         print("Your folder has been created.")
+    # finally will be run at the end of a try-except but I only will have choice
+    # defined if the FileExistsError runs. So we check if choice in locals.
     finally:
         if "choice" in locals():
             if choice == "yes":
@@ -44,6 +46,7 @@ def create_folder(full_path):
                     shutil.rmtree(full_path)
                     mkdir(full_path)
                     print("Your folder has been overwritten.")
+        # TODO: Sort out these continuing prints.
                 else:
                     print("Continuing without overwriting.")
             else:
