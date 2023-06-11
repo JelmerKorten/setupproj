@@ -9,9 +9,9 @@ Sets up a new project folder and venv using the provided folder name.
 To use:
 - Copy the setupproj.py to your Projects folder or in which folder you want to create a new folder in.
 - In terminal cd to the folder and run:
-Windows:
+\nWindows:\n
 python setupproj.py --f FOLDER [--open IDE] [--url url/to/repo.git]
-MacOS:
+\nMacOS:\n
 python3 setupproj.py --f FOLDER [--open IDE] [--url url/to/repo.git]
 # In Detail:
 - Uses standard path os.mkdir to create a new folder in the current directory.
