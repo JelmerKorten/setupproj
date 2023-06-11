@@ -1,8 +1,8 @@
 ## Readme
 
 # Prerequisite
-Python is installed.
-Optional: Github is signed in in terminal and ready to use.
+Python is installed.<br>
+Optional: Github is signed in in terminal and ready to use.<br>
 Optional: Your IDE.exe is added to path and can be opened with: code . or pycharm .
 # Jump right in:
 Sets up a new project folder and venv using the provided folder name.
