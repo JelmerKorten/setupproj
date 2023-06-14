@@ -95,7 +95,7 @@ def use_folder(full_path, folder, openyn, URL, sys_name):
         system(f"git remote add origin {URL}")
         system("git remote -v")
     system("echo readme > README.md")
-    print(f""".{folder} 
+    TEXT = f""".{folder} 
            
 # Created by https://www.toptal.com/developers/gitignore/api/macos
 # Edit at https://www.toptal.com/developers/gitignore?templates=macos
@@ -296,8 +296,10 @@ cython_debug/
 #  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
-#.idea/""", 
-file=".gitignore")
+#.idea"""
+    with open('.gitignore','w') as f:
+        f.write(TEXT)
+        
     if not URL == None:
         system("git add . && git commit -m 'initial commit'")
         system("git push -u origin main")
