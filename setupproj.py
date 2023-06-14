@@ -38,7 +38,7 @@ def create_folder(full_path):
     To Run:
     copy this file to the folder that holds all your projects / where you want to set up a new project:
     In terminal cd to the folder you want to setup the project
-    python setupproj.py --open [vscode/pycharm] --f [PROJECTNAME] --url [GITHUB REPO URL]"""
+    python setupproj.py --f PROJECTNAME [--open vscode/pycharm] [--url GITHUB REPO URL]"""
 
     try:
         mkdir(full_path)
@@ -110,7 +110,7 @@ def use_folder(full_path, folder, openyn, URL, sys_name):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Setup new project folder")
     parser.add_argument("--f", dest="folder", type=str, help="name of folder to be added")
-    parser.add_argument("--open", dest='openyn', default=False, help="To open VScode when done via 'code .'")
+    parser.add_argument("--open", dest='openyn', default=False, help="To open VScode/Pycharm when done via 'code/pycharm .'")
     parser.add_argument("--url", dest="URL", type=str, help="Use --url URL to provide github url to link to")
     
     args=parser.parse_args()
