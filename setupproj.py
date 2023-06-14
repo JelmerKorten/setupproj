@@ -33,7 +33,12 @@ clear = lambda: system("cls || clear")
 def create_folder(full_path):
     """Creates a folder based on the fullpath provided.
     The full path is create based on the folder this file is ran in and the new foldername provided.
-    Should that folder already exist it will ask you before overwriting."""
+    Should that folder already exist it will ask you before overwriting.
+    
+    To Run:
+    copy this file to the folder that holds all your projects / where you want to set up a new project:
+    In terminal cd to the folder you want to setup the project
+    python setupproj.py --open [vscode/pycharm] --f [PROJECTNAME] --url [GITHUB REPO URL]"""
 
     try:
         mkdir(full_path)
