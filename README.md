@@ -7,8 +7,8 @@ Optional: Your IDE.exe is added to path and can be opened with: code . or pychar
 # Jump right in:
 Sets up a new project folder and venv using the provided folder name.
 To use:
-- Copy the setupproj.py to your Projects folder or in which folder you want to create a new folder in.
-- In terminal cd to the folder and run:
+- Copy the setupproj.py to your Projects folder or in which folder you want to create a new folder in. 
+- In terminal cd to the folder and run: <br>
 Windows:  <br>
 python setupproj.py --f FOLDER [--open IDE] [--url url/to/repo.git]<br>
 MacOS:<br>

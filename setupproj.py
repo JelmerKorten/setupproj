@@ -123,7 +123,6 @@ if __name__ == "__main__":
     dir_path = dirname(realpath(__file__))
     full_path = join(dir_path, folder)
 
-
     clear()
     print(f"Trying to create >{folder}< in {dir_path}")
     create_folder(full_path)
