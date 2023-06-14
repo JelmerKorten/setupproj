@@ -18,7 +18,7 @@
 
 # setupproj
 # To set up a project
-# version 1.0.1
+# version 1.0.2
 
 import sys
 from os import system, mkdir, makedirs, chdir
